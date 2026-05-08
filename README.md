@@ -28,14 +28,6 @@ python3 benchmark.py --workload 1000000
 With hardware counters (branch misses, cache misses, IPC):
 ```
 perf stat -e cycles,instructions,branches,branch-misses,cache-references,cache-misses python3 benchmark.py --workload 1000000
-```
-
-On the Pi 5, add `:u` to each event since only user-space events are accessible:
-```
-perf stat -e cycles:u,instructions:u,branches:u,branch-misses:u,cache-references:u,cache-misses:u python3 benchmark.py --workload 1000000
-```
-
----
 
 ## Workload Sizes
 
